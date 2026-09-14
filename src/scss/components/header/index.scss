@@ -1,0 +1,52 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+header {
+  @include m.flex-settings (row, no-wrap, 0, start, center);
+
+  nav {
+    flex-grow: 1;
+
+    ul {
+      @include m.flex-settings (row, no-wrap, 2vw, start, stretch);
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  .action {
+    @include m.flex-settings (row, no-wrap, 24px, start, center);
+  }
+
+  .theme {
+    @include m.flex-settings (row, no-wrap, 8px, start, center);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 4px;
+    cursor: pointer;
+
+    .light-btn {
+      background: url("/src/assets/icons/Sun.svg") center no-repeat;
+    }
+
+    .light-btn,
+    .dark-btn {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .menu-item {
+    padding-right: 28px;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid transparent;
+  }
+
+  nav a:hover,
+  a.menu-item:hover {
+    border-bottom: 2px solid v.$text-primary;
+  }
+}

@@ -1,0 +1,47 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+* {
+  transition:
+    background .4s ease,
+    color .4s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  @include m.typography (v.$font-family, 600, 16px, 150%, normal, v.$text-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  display: block;
+}
+
+#app {
+  @include m.flex-settings (column, no-wrap, 20px, start, stretch);
+  max-width: 1440px;
+  margin: 20px auto 40px auto;
+
+  .content{
+    @include m.flex-settings (column, no-wrap, 100px, start, stretch);
+  }
+
+  header,
+  section,
+  footer {
+    padding: 0 40px;
+  }
+
+}

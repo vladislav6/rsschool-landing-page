@@ -1,0 +1,33 @@
+@use '/src/scss/common/variables' as v;
+
+body.dark {
+  background-color: v.$dark-bg-page;
+  color: v.$dark-text-primary;
+
+  a {
+    color: v.$dark-text-primary;
+  }
+
+  .theme {
+    border-color: v.$dark-border-primary;
+
+    .dark-btn {
+      background: v.$text-accent url("/src/assets/icons/dark/moon.svg") center no-repeat;
+    }
+  }
+
+  .theme:hover {
+    .light-btn {
+      background-color: v.$text-accent;
+    }
+  }
+
+  .menu-item {
+    background-image: url("/src/assets/icons/dark/coffee-cup.svg");
+  }
+
+  nav a:hover,
+  a.menu-item:hover {
+    border-bottom: 2px solid v.$dark-text-primary;
+  }
+}

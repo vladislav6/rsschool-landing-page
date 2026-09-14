@@ -1,5 +1,5 @@
 import { createMyElement } from './../common/functions';
 
-const footer = createMyElement('footer', '', 'footer');
+const footer = createMyElement('footer', '', 'contacts');
   
 export default footer;

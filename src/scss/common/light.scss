@@ -1,0 +1,36 @@
+@use '/src/scss/common/variables' as v;
+
+body.light {
+  background-color: v.$background-page;
+
+  a {
+    color: v.$text-primary;
+  }
+
+  .theme {
+    border-color: v.$border-primary;
+
+    .light-btn {
+      background-color: v.$text-accent;
+    }
+
+    .dark-btn {
+      background: url("/src/assets/icons/light/moon.svg") center no-repeat;
+    }
+  }
+
+  .theme:hover {
+    .dark-btn {
+      background: v.$dark-border-primary url("/src/assets/icons/dark/moon.svg") center no-repeat;
+    }
+  }
+
+  .menu-item {
+    background-image: url("/src/assets/icons/light/coffee-cup.svg");
+  }
+
+  nav a:hover,
+  a.menu-item:hover {
+    border-bottom: 2px solid v.$text-primary;
+  }
+}
