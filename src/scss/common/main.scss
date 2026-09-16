@@ -4,7 +4,9 @@
 * {
   transition:
     background .4s ease,
-    color .4s ease;
+    color .4s ease,
+    padding-left .4s ease,
+    padding-right .4s ease;
 }
 
 html {
@@ -16,7 +18,9 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+h1,
+p {
   padding: 0;
   margin: 0;
 

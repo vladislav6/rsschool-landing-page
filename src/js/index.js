@@ -13,7 +13,7 @@ const titlePage = document.getElementsByTagName('title');
 const app = document.getElementById('app');
 const content = createMyElement('div', 'content');
 
-if (!theme.name) {
+if (!localStorage.getItem('theme')) {
   localStorage.setItem('theme', 'light');
   body.className = 'light';
 }

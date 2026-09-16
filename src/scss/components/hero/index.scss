@@ -1,0 +1,48 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+.hero-overlay {
+  background: url("/hero.gif") center / cover no-repeat;
+  border-radius: 40px;
+  
+  .hero-block {
+    padding: 100px;
+    color: v.$text-inverse;
+    @include m.flex-settings (column, no-wrap, 40px, start, stretch);
+    max-width: 730px;
+
+    h1 {
+      font-size: 72px;
+      line-height: 105%;
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    button {
+      border-radius: 100px;
+      padding-block: 20px;
+      padding-inline: 78px;
+      width: 200px;
+      height: 64px;
+      background-color: v.$text-inverse;
+      border: none;
+    }
+  }
+
+  .highlight {
+    color: v.$text-accent;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 792px) {
+  .hero {
+
+    .hero-block {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
