@@ -30,4 +30,12 @@ body.dark {
   a.menu-item:hover {
     border-bottom: 2px solid v.$dark-text-primary;
   }
+
+  .burger {
+    border: 1px solid v.$dark-border-inverse;
+    
+    .line {
+      background-color: v.$dark-text-primary;
+    }
+  }
 }

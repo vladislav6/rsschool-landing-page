@@ -21,6 +21,10 @@ header.innerHTML = `
       <div class="dark-btn"></div>
     </div>
     <a class="menu-item" href="/catalog">Menu</a>
+    <div class="burger">
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
   </div>
 `;
 

@@ -45,8 +45,32 @@ header {
     border-bottom: 2px solid transparent;
   }
 
-  nav a:hover,
-  a.menu-item:hover {
-    border-bottom: 2px solid v.$text-primary;
+  .burger {
+    display: none;
+    border: 1px solid v.$background-container;
+    border-radius: 100px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+
+    .line {
+      width: 18px;
+      height: 1px;
+      background-color: v.$text-primary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    nav,
+    .menu-item {
+      display: none;
+    }
+
+    .burger {
+      @include m.flex-settings (column, no-wrap, 8px, center, center);
+    }
   }
 }

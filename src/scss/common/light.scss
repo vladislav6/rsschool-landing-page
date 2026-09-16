@@ -33,4 +33,12 @@ body.light {
   a.menu-item:hover {
     border-bottom: 2px solid v.$text-primary;
   }
+
+  .burger {
+    border: 1px solid v.$background-container;
+    
+    .line {
+      background-color: v.$text-primary;
+    }
+  }
 }
