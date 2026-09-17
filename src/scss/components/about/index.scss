@@ -1,0 +1,64 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+#about {
+  h2 {
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+  }
+
+  .gallery {
+    column-count: 2;
+    column-gap: 40px;
+
+    .picture {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .one,
+    .two,
+    .three,
+    .four {
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1);
+      transition: transform .4s ease;
+    }
+
+    .one { background: url("/src/assets/gallery/about-1.jpg") center / cover no-repeat; }
+    .two { background: url("/src/assets/gallery/about-2.jpg") center / cover no-repeat; }
+    .three { background: url("/src/assets/gallery/about-3.jpg") center / cover no-repeat; }
+    .four { background: url("/src/assets/gallery/about-4.jpg") center / cover no-repeat; }
+
+    .big {
+      height: 590px;  
+    }
+
+    .small {
+      height: 430px;  
+    }
+
+    .one:hover,
+    .two:hover,
+    .three:hover,
+    .four:hover {
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #about {
+    .gallery {
+      column-count: 1;
+      column-gap: 0;
+    }
+
+    .small {
+      display: none;  
+    }
+  }
+}

@@ -17,8 +17,16 @@
     @include m.flex-settings (column, no-wrap, 20px, start, center);
   }
 
+  .coffee-image {
+    max-width: 480px;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .coffee-info {
-    width: 470px;
+    max-width: 470px;
     @include m.flex-settings (column, no-wrap, 16px, start, center);
 
     h3,

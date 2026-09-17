@@ -10,11 +10,12 @@ slider.innerHTML = `
   <button class="slider-btn slider-btn--left" aria-label="Previous coffee"></button>
 
   <div class="slide">
-    <img
-      class="coffee-image"
-      src="src/assets/slider/coffee-slider-1.png"
-      alt="S'mores Frappuccino"
-    >
+    <div class="coffee-image">
+      <img
+        src="src/assets/slider/coffee-slider-1.png"
+        alt="S'mores Frappuccino"
+      >
+    </div>
     <div class="coffee-info">
       <h3>S'mores Frappuccino</h3>
 
