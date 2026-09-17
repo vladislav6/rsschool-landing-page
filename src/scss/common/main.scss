@@ -20,6 +20,8 @@ a {
 
 ul,
 h1,
+h2,
+h3,
 p {
   padding: 0;
   margin: 0;
@@ -37,6 +39,10 @@ img {
   display: block;
 }
 
+h2 {
+  @include m.typography (v.$font-family, 600, 60px, 125%, normal, inherit);
+}
+
 #app {
   @include m.flex-settings (column, no-wrap, 20px, start, stretch);
   max-width: 1440px;
@@ -50,6 +56,11 @@ img {
   section,
   footer {
     padding: 0 40px;
+  }
+
+  .highlight {
+    color: v.$text-accent;
+    font-style: italic;
   }
 
 }

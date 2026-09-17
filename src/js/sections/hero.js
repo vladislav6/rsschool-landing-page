@@ -13,7 +13,7 @@ hero.innerHTML = `
         House Resource is a popular destination for coffee lovers and those
         seeking a warm and inviting space to enjoy their favorite beverage.
       </p>
-      <button>Menu</button>
+      <button>Menu <span class="cup"></span></button>
     </div>
   </div>
 `;

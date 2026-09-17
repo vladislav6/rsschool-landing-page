@@ -22,18 +22,24 @@
 
     button {
       border-radius: 100px;
-      padding-block: 20px;
-      padding-inline: 78px;
       width: 200px;
       height: 64px;
-      background-color: v.$text-inverse;
+      font-weight: 600;
       border: none;
+      @include m.flex-settings (row, no-wrap, 8px, center, center);
+      padding-left: 28px;
     }
-  }
 
-  .highlight {
-    color: v.$text-accent;
-    font-style: italic;
+    .cup {
+      display: block;
+      visibility: hidden;
+      width: 20px;
+      height: 20px;
+    }
+
+    button:hover .cup{
+      visibility: visible;
+    }
   }
 }
 

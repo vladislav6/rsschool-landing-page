@@ -41,4 +41,31 @@ body.light {
       background-color: v.$text-primary;
     }
   }
+
+  .hero button {
+    background-color: v.$text-inverse;
+
+    .cup {
+      background-image: url("/src/assets/icons/light/coffee-cup.svg");
+    }
+  }
+
+  .slider-btn {
+    background: url("/src/assets/icons/light/arrow.svg") center no-repeat;
+    border-color: v.$background-container;
+  }
+
+  .slider-btn:hover {
+    background: v.$background-container url("/src/assets/icons/dark/arrow.svg") center no-repeat;
+  }
+
+  .slider-dots {
+    .dot {
+      background-color: v.$border-primary;
+    }
+
+    .dot--active {
+      background-color: v.$background-container;
+    }
+  }
 }

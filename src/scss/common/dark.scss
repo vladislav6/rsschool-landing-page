@@ -38,4 +38,33 @@ body.dark {
       background-color: v.$dark-text-primary;
     }
   }
+
+  .hero button {
+    background-color: v.$dark-bg-page;
+    color: v.$dark-text-primary;
+
+    .cup {
+      background-image: url("/src/assets/icons/dark/coffee-cup.svg");
+    }
+  }
+
+  .slider-btn {
+    background: url("/src/assets/icons/dark/arrow.svg") center no-repeat;
+    border-color: v.$dark-border-inverse;
+  }
+
+  .slider-btn:hover {
+    background: v.$dark-bg-container url("/src/assets/icons/dark/arrow.svg") center no-repeat;
+    border-color: v.$dark-bg-container;
+  }
+
+  .slider-dots {
+    .dot {
+      background-color: v.$dark-border-primary;
+    }
+
+    .dot--active {
+      background-color: v.$dark-border-inverse;
+    }
+  }
 }
