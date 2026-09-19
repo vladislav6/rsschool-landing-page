@@ -60,4 +60,23 @@ body.dark {
       border-color: v.$dark-bg-container;
     }
   }
+
+  .footer {
+    &__content {
+      background-color: v.$dark-bg-container;
+    }
+
+    &__socials {
+      a { border-color: v.$dark-border-primary; }
+      a:hover {
+        border-color: v.$dark-bg-page;
+        background-color: v.$dark-bg-page;
+      }
+    }
+
+    &__contacts {
+      ul li { border-bottom-color: v.$dark-bg-container; }
+      ul li:hover { border-bottom-color: v.$text-inverse; }
+    }
+  }
 }

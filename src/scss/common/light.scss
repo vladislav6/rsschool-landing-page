@@ -58,4 +58,23 @@ body.light {
     a:hover .apple { background: url("/src/assets/icons/dark/app-store.svg") center no-repeat; }
     a:hover .google { background: url("/src/assets/icons/dark/google-store.svg") center no-repeat; }
   }
+
+  .footer {
+    &__content {
+      color: v.$text-inverse;
+      background-color: v.$background-container;
+    }
+
+    &__socials {
+      a { border-color: v.$border-primary; }
+      a[aria-label=Twitter]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-twitter.svg") center no-repeat; }
+      a[aria-label=Instagram]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-instagram.svg") center no-repeat; }
+      a[aria-label=Facebook]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-facebook.svg") center no-repeat; }
+    }
+
+    &__contacts {
+      ul li { border-bottom-color: v.$background-container; }
+      ul li:hover { border-bottom-color: v.$text-inverse; }
+    }
+  }
 }
