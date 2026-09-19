@@ -3,51 +3,36 @@
 body.light {
   background-color: v.$background-page;
 
-  a {
-    color: v.$text-primary;
-  }
+  a { color: v.$text-primary; }
 
   .theme {
     border-color: v.$border-primary;
 
-    .light-btn {
-      background-color: v.$text-accent;
-    }
-
-    .dark-btn {
-      background: url("/src/assets/icons/light/moon.svg") center no-repeat;
-    }
+    .light-btn { background-color: v.$text-accent; }
+    .dark-btn { background: url("/src/assets/icons/light/moon.svg") center no-repeat; }
   }
 
   .theme:hover {
-    .dark-btn {
-      background: v.$dark-border-primary url("/src/assets/icons/dark/moon.svg") center no-repeat;
-    }
+    .dark-btn { background: v.$dark-border-primary url("/src/assets/icons/dark/moon.svg") center no-repeat; }
   }
 
-  .menu-item {
-    background-image: url("/src/assets/icons/light/coffee-cup.svg");
-  }
+  .menu-item { background-image: url("/src/assets/icons/light/coffee-cup.svg"); }
 
   nav a:hover,
-  a.menu-item:hover {
+  a.menu-item:hover { 
     border-bottom: 2px solid v.$text-primary;
   }
 
   .burger {
     border: 1px solid v.$background-container;
     
-    .line {
-      background-color: v.$text-primary;
-    }
+    .line { background-color: v.$text-primary; }
   }
 
   .hero button {
     background-color: v.$text-inverse;
 
-    .cup {
-      background-image: url("/src/assets/icons/light/coffee-cup.svg");
-    }
+    .cup { background-image: url("/src/assets/icons/light/coffee-cup.svg"); }
   }
 
   .slider-btn {
@@ -55,17 +40,22 @@ body.light {
     border-color: v.$background-container;
   }
 
-  .slider-btn:hover {
-    background: v.$background-container url("/src/assets/icons/dark/arrow.svg") center no-repeat;
-  }
+  .slider-btn:hover { background: v.$background-container url("/src/assets/icons/dark/arrow.svg") center no-repeat; }
 
   .slider-dots {
-    .dot {
-      background-color: v.$border-primary;
-    }
+    .dot { background-color: v.$border-primary; }
+    .dot--active { background-color: v.$background-container; }
+  }
 
-    .dot--active {
-      background-color: v.$background-container;
+  .download-btn {
+    a { border-color: v.$background-container; }
+    .apple { background: url("/src/assets/icons/light/app-store.svg") center no-repeat; }
+    .google { background: url("/src/assets/icons/light/google-store.svg") center no-repeat; }
+    a:hover {
+      background: v.$background-container;
+      color: v.$text-inverse;
     }
+    a:hover .apple { background: url("/src/assets/icons/dark/app-store.svg") center no-repeat; }
+    a:hover .google { background: url("/src/assets/icons/dark/google-store.svg") center no-repeat; }
   }
 }

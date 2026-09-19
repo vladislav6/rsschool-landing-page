@@ -1,0 +1,60 @@
+@use '/src/scss/common/mixins' as m;
+
+#download {
+  @include m.flex-settings (row, no-wrap, 100px, start, center);
+
+  .download-desc {
+    font-weight: 400;
+  }
+
+  .btn-title {
+    font-size: 10px;
+    line-height: 140%;
+  }
+
+  .download-info,
+  .download-phones {
+    max-width: 630px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .download-info {
+    @include m.flex-settings (column, no-wrap, 40px, start, stretch);
+  }
+
+  .download-btn {
+    @include m.flex-settings (row, no-wrap, 20px, start, stretch);
+
+    a {
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 100px;
+      padding-block: 12px;
+      padding-inline: 20px;
+      width: 200px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    .btn-icon {
+      width: 36px;
+      height: 36px;
+      display: block;
+      float: left;
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  #download {
+    flex-direction: column;
+
+    .download-info {
+      max-width: 100%;
+    }
+  }
+}

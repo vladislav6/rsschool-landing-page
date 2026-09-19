@@ -4,27 +4,19 @@ body.dark {
   background-color: v.$dark-bg-page;
   color: v.$dark-text-primary;
 
-  a {
-    color: v.$dark-text-primary;
-  }
+  a { color: v.$dark-text-primary; }
 
   .theme {
     border-color: v.$dark-border-primary;
 
-    .dark-btn {
-      background: v.$text-accent url("/src/assets/icons/dark/moon.svg") center no-repeat;
-    }
+    .dark-btn { background: v.$text-accent url("/src/assets/icons/dark/moon.svg") center no-repeat; }
   }
 
   .theme:hover {
-    .light-btn {
-      background-color: v.$text-accent;
-    }
+    .light-btn { background-color: v.$text-accent; }
   }
 
-  .menu-item {
-    background-image: url("/src/assets/icons/dark/coffee-cup.svg");
-  }
+  .menu-item { background-image: url("/src/assets/icons/dark/coffee-cup.svg"); }
 
   nav a:hover,
   a.menu-item:hover {
@@ -34,18 +26,14 @@ body.dark {
   .burger {
     border: 1px solid v.$dark-border-inverse;
     
-    .line {
-      background-color: v.$dark-text-primary;
-    }
+    .line { background-color: v.$dark-text-primary; }
   }
 
   .hero button {
     background-color: v.$dark-bg-page;
     color: v.$dark-text-primary;
 
-    .cup {
-      background-image: url("/src/assets/icons/dark/coffee-cup.svg");
-    }
+    .cup { background-image: url("/src/assets/icons/dark/coffee-cup.svg"); }
   }
 
   .slider-btn {
@@ -59,12 +47,17 @@ body.dark {
   }
 
   .slider-dots {
-    .dot {
-      background-color: v.$dark-border-primary;
-    }
+    .dot { background-color: v.$dark-border-primary; }
+    .dot--active { background-color: v.$dark-border-inverse; }
+  }
 
-    .dot--active {
-      background-color: v.$dark-border-inverse;
+  .download-btn {
+    a { border-color: v.$dark-border-inverse; }
+    .apple { background: url("/src/assets/icons/dark/app-store.svg") center no-repeat; }
+    .google { background: url("/src/assets/icons/dark/google-store.svg") center no-repeat; }
+    a:hover {
+      background: v.$dark-bg-container;
+      border-color: v.$dark-bg-container;
     }
   }
 }
