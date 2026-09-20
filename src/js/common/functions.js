@@ -26,5 +26,5 @@ export function createMyElement(
     : localStorage.setItem('theme', 'light');
   theme.name = localStorage.getItem('theme');
   body.className = theme.name;
-  document.querySelector('.logo').src = `./src/assets/icons/${theme.name}/logo.png`;
+  document.querySelector('.logo').src = `./images/${theme.name}/logo.png`;
  };

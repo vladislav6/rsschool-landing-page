@@ -13,12 +13,12 @@ download.innerHTML = `
     your favorite coffee from wherever you are
   </p>
   <div class="download-btn">
-    <a href="#">
+    <a href="https://apple.com/" target="_blank">
       <span class="btn-icon apple"></span>
       <p class="btn-title">Available on the</p>
       <p class="btn-subtitle">App Store</p>
     </a>
-    <a href="#">
+    <a href="https://google.com/" target="_blank">
       <span class="btn-icon google"></span>
       <p class="btn-title">Available on</p>
       <p class="btn-subtitle">Google Play</p>
@@ -26,7 +26,7 @@ download.innerHTML = `
   </div>
 </div>
 <div class="download-phones">
-  <img src="./src/assets/mobile-screens.png" alt="Coffee app on smartphone">
+  <img src="./images/mobile-screens.png" alt="Coffee app on smartphone">
 </div>
 `;
   

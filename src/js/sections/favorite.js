@@ -12,7 +12,7 @@ slider.innerHTML = `
   <div class="slide">
     <div class="coffee-image">
       <img
-        src="src/assets/slider/coffee-slider-1.png"
+        src="./images/slider/coffee-slider-1.png"
         alt="S'mores Frappuccino"
       >
     </div>

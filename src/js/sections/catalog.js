@@ -16,7 +16,7 @@ catalog.innerHTML = `
 <div class="coffee-grid">
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-1.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-1.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Irish coffee</h3>
@@ -27,7 +27,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-2.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-2.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Kahlua coffee</h3>
@@ -38,7 +38,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-3.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-3.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Honey raf</h3>
@@ -49,7 +49,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-4.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-4.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Ice cappuccino</h3>
@@ -60,7 +60,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-5.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-5.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Espresso</h3>
@@ -71,7 +71,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-6.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-6.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Latte</h3>
@@ -82,7 +82,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-7.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-7.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Latte macchiato</h3>
@@ -93,7 +93,7 @@ catalog.innerHTML = `
 
   <article class="coffee-card">
     <div class="coffee-card__img">
-      <img src="src/assets/catalog/coffee-8.png" alt="Coffee with cognac">
+      <img src="./images/catalog/coffee-8.png" alt="Coffee with cognac">
     </div>
     <div class="coffee-card__content">
       <h3>Coffee with cognac</h3>

@@ -1,5 +1,5 @@
 import '../scss/index.scss';
-import { createMyElement, themeSwitch } from './common/functions';
+import { themeSwitch, createMyElement } from './common/functions';
 import { path, body, theme } from './common/common';
 import header from './sections/header';
 import footer from './sections/footer';
@@ -9,7 +9,6 @@ import favorite from './sections/favorite';
 import about from './sections/about';
 import download from './sections/download';
 
-const titlePage = document.getElementsByTagName('title');
 const app = document.getElementById('app');
 const content = createMyElement('div', 'content');
 
@@ -19,15 +18,14 @@ if (!localStorage.getItem('theme')) {
 }
   body.className = theme.name;
 
-switch (path) {
-  case '/catalog':
-    titlePage[0].innerText = 'Coffee House | Catalog';
-    content.append(catalog, footer);
-    break;
-  default:
-    content.append(hero, favorite, about, download, footer);
+if (path === '/rsschool-landing-page/catalog') {
+  content.append(catalog, footer);
+} else {
+  content.append(hero, favorite, about, download, footer);
 }
 
- app.append(header, content);
+app.append(header, content);
 
  document.querySelector('.theme').addEventListener('click', themeSwitch);
+ document.querySelector('.menu-btn')
+  ?.addEventListener('click', () => document.location.href = '/rsschool-landing-page/catalog');

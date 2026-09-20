@@ -4,6 +4,12 @@ export default defineConfig({
   base: './',
   build: {
     minify: false,
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        catalog: 'catalog.html'
+      }
+    }
   }
 });

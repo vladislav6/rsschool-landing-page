@@ -4,14 +4,14 @@ import { path, theme } from '../common/common';
 const header = createMyElement('header');
 
 header.innerHTML = `
-  <a href="/">
-    <img class="logo" src="./src/assets/icons/${theme.name}/logo.png" alt="Logo">
+  <a href="/rsschool-landing-page/">
+    <img class="logo" src="./images/${theme.name}/logo.png" alt="Logo">
   </a>
   <nav>
     <ul>
-      <li><a href="/#favorite">Favorite coffee</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#download">Mobile app</a></li>
+      <li><a href="/rsschool-landing-page/#favorite">Favorite coffee</a></li>
+      <li><a href="/rsschool-landing-page/#about">About</a></li>
+      <li><a href="/rsschool-landing-page/#download">Mobile app</a></li>
       <li><a href="${path}#contacts">Contact us</a></li>
     </ul>
   </nav>
@@ -20,7 +20,7 @@ header.innerHTML = `
       <div class="light-btn"></div>
       <div class="dark-btn"></div>
     </div>
-    <a class="menu-item" href="/catalog">Menu</a>
+    <a class="menu-item" href="/rsschool-landing-page/catalog">Menu</a>
     <div class="burger">
       <span class="line"></span>
       <span class="line"></span>
