@@ -13,7 +13,7 @@ body.dark {
   }
 
   .theme:hover {
-    .light-btn { background-color: v.$text-accent; }
+    .light-btn { background-color: v.$dark-bg-container; }
   }
 
   .menu-item { background-image: url("/src/assets/icons/dark/coffee-cup.svg"); }
@@ -78,5 +78,31 @@ body.dark {
       ul li { border-bottom-color: v.$dark-bg-container; }
       ul li:hover { border-bottom-color: v.$text-inverse; }
     }
+  }
+
+  .catalog {
+
+    .categories {
+      button {
+        border-color: v.$dark-border-primary;
+        color: v.$text-inverse;
+      
+        .coffee-icon { background: v.$dark-border-primary url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$dark-border-primary url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$dark-border-primary url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+
+      button:hover,
+      .active {
+        background: v.$dark-bg-container;
+        border-color: v.$dark-bg-container;
+
+        .coffee-icon { background: v.$dark-bg-page url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$dark-bg-page url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$dark-bg-page url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+    }
+
+    .coffee-card { border-color: v.$dark-border-primary; }
   }
 }

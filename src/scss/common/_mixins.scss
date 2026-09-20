@@ -17,8 +17,8 @@
   display: flex;
 }
 
-@mixin grid-settings ($gtc, $gap: 0) {
-  grid-template-columns: repeat($gtc, 1fr);
+@mixin grid-settings ($gtcMin, $gtcMax, $gap: 0) {
+  grid-template-columns: repeat(auto-fill, minmax($gtcMin, $gtcMax));
   gap: $gap;
   display: grid;
 }

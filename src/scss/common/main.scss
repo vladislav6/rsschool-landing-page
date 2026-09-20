@@ -6,7 +6,8 @@
     background .4s ease,
     color .4s ease,
     padding-left .4s ease,
-    padding-right .4s ease;
+    padding-right .4s ease,
+    transform .4s ease;
 }
 
 html {
@@ -29,6 +30,10 @@ p {
   li {
     list-style: none;
   }
+}
+
+h3 {
+  font-size: 24px;
 }
 
 button {

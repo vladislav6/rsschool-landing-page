@@ -77,4 +77,30 @@ body.light {
       ul li:hover { border-bottom-color: v.$text-inverse; }
     }
   }
+
+  .catalog {
+
+    .categories {
+      button {
+        border-color: v.$border-primary;
+        color: v.$text-primary;
+      
+        .coffee-icon { background: v.$border-primary url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$border-primary url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$border-primary url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+
+      button:hover,
+      .active {
+        background: v.$background-container;
+        color: v.$text-inverse;
+
+        .coffee-icon { background: v.$text-inverse url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$text-inverse url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$text-inverse url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+    }
+
+    .coffee-card { border-color: v.$border-primary; }
+  }
 }
