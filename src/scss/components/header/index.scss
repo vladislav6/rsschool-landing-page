@@ -1,0 +1,76 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+header {
+  @include m.flex-settings (row, no-wrap, 0, start, center);
+
+  nav {
+    flex-grow: 1;
+
+    ul {
+      @include m.flex-settings (row, no-wrap, 2vw, start, stretch);
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  .action {
+    @include m.flex-settings (row, no-wrap, 24px, start, center);
+  }
+
+  .theme {
+    @include m.flex-settings (row, no-wrap, 8px, start, center);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 4px;
+    cursor: pointer;
+
+    .light-btn {
+      background: url("/src/assets/icons/Sun.svg") center no-repeat;
+    }
+
+    .light-btn,
+    .dark-btn {
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .menu-item {
+    padding-right: 28px;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid transparent;
+  }
+
+  .burger {
+    display: none;
+    border: 1px solid v.$background-container;
+    border-radius: 100px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+
+    .line {
+      width: 18px;
+      height: 1px;
+      background-color: v.$text-primary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    nav,
+    .menu-item {
+      display: none;
+    }
+
+    .burger {
+      @include m.flex-settings (column, no-wrap, 8px, center, center);
+    }
+  }
+}

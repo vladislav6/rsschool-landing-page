@@ -1,0 +1,85 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+.footer {
+  &__content {
+    padding: 100px;
+    @include m.flex-settings (row, no-wrap, 100px, start, center);
+    border-radius: 40px;
+  }
+
+  &__brand,
+  &__contacts {
+    max-width: 530px;
+    flex-grow: 1;
+    @include m.flex-settings (column, no-wrap, 40px, start, stretch);
+
+    ul li a { color: inherit; }
+  }
+
+  &__socials {
+    @include m.flex-settings (row, no-wrap, 12px, start, stretch);
+
+    a {
+      border-width: 1px;
+      border-style:  solid;
+      border-radius: 100px;
+      width: 60px;
+      height: 60px;
+    }
+
+    a[aria-label=Twitter] { background: url("/src/assets/icons/socials/light-twitter.svg") center no-repeat; }
+    a[aria-label=Instagram] { background: url("/src/assets/icons/socials/light-instagram.svg") center no-repeat; }
+    a[aria-label=Facebook] { background: url("/src/assets/icons/socials/light-facebook.svg") center no-repeat; }
+  }
+
+  &__contacts {
+    ul li {
+      @include m.flex-settings (row, no-wrap, 8px, start, stretch);
+      margin-bottom: 16px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      width: fit-content;
+    }
+
+    .contacts-icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .address { background: url("/src/assets/icons/contacts/pin-alt.svg") center no-repeat; }
+    .phone { background: url("/src/assets/icons/contacts/phone.svg") center no-repeat; }
+    .time { background: url("/src/assets/icons/contacts/clock.svg") center no-repeat; }
+
+    ul li:hover {
+      border-bottom-color: v.$text-inverse;
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .footer {
+    &__content {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    &__content {
+      padding: 60px 16px;
+      gap: 40px;
+    }
+  }
+}

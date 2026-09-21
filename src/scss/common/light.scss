@@ -1,0 +1,108 @@
+@use '/src/scss/common/variables' as v;
+
+body.light {
+  background-color: v.$background-page;
+
+  a { color: v.$text-primary; }
+
+  .theme {
+    border-color: v.$border-primary;
+
+    .light-btn { background-color: v.$text-accent; }
+    .dark-btn { background: url("/src/assets/icons/light/moon.svg") center no-repeat; }
+  }
+
+  .theme:hover {
+    .dark-btn { background: v.$dark-border-primary url("/src/assets/icons/dark/moon.svg") center no-repeat; }
+  }
+
+  .menu-item { background-image: url("/src/assets/icons/light/coffee-cup.svg"); }
+
+  nav a:hover,
+  a.menu-item:hover { 
+    border-bottom: 2px solid v.$text-primary;
+  }
+
+  .burger {
+    border: 1px solid v.$background-container;
+    
+    .line { background-color: v.$text-primary; }
+  }
+
+  .hero button {
+    background-color: v.$text-inverse;
+
+    .cup { background-image: url("/src/assets/icons/light/coffee-cup.svg"); }
+  }
+
+  .slider-btn {
+    background: url("/src/assets/icons/light/arrow.svg") center no-repeat;
+    border-color: v.$background-container;
+  }
+
+  .slider-btn:hover { background: v.$background-container url("/src/assets/icons/dark/arrow.svg") center no-repeat; }
+
+  .slider-dots {
+    .dot { background-color: v.$border-primary; }
+    .dot--active { background-color: v.$background-container; }
+  }
+
+  .download-btn {
+    a { border-color: v.$background-container; }
+    .apple { background: url("/src/assets/icons/light/app-store.svg") center no-repeat; }
+    .google { background: url("/src/assets/icons/light/google-store.svg") center no-repeat; }
+    a:hover {
+      background: v.$background-container;
+      color: v.$text-inverse;
+    }
+    a:hover .apple { background: url("/src/assets/icons/dark/app-store.svg") center no-repeat; }
+    a:hover .google { background: url("/src/assets/icons/dark/google-store.svg") center no-repeat; }
+  }
+
+  .footer {
+    &__content {
+      color: v.$text-inverse;
+      background-color: v.$background-container;
+    }
+
+    &__socials {
+      a { border-color: v.$border-primary; }
+      a[aria-label=Twitter]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-twitter.svg") center no-repeat; }
+      a[aria-label=Instagram]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-instagram.svg") center no-repeat; }
+      a[aria-label=Facebook]:hover { background: v.$text-inverse url("/src/assets/icons/socials/dark-facebook.svg") center no-repeat; }
+    }
+
+    &__contacts {
+      ul li { border-bottom-color: v.$background-container; }
+      ul li:hover { border-bottom-color: v.$text-inverse; }
+    }
+  }
+
+  .catalog {
+
+    .categories {
+      button {
+        border-color: v.$border-primary;
+        color: v.$text-primary;
+      
+        .coffee-icon { background: v.$border-primary url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$border-primary url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$border-primary url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+
+      button:hover,
+      .active {
+        background: v.$background-container;
+        color: v.$text-inverse;
+
+        .coffee-icon { background: v.$text-inverse url("/src/assets/icons/categories/coffee-icon.png") center no-repeat; }
+        .tea-icon { background: v.$text-inverse url("/src/assets/icons/categories/tea-icon.png") center no-repeat; }
+        .dessert-icon { background: v.$text-inverse url("/src/assets/icons/categories/dessert-icon.png") center no-repeat; }
+      }
+    }
+
+    .coffee-card { border-color: v.$border-primary; }
+
+    .show-more { background: transparent url("/src/assets/icons/light/refresh.svg") center no-repeat; }
+  }
+}

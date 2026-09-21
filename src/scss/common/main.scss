@@ -1,0 +1,93 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+* {
+  transition:
+    background .4s ease,
+    color .4s ease,
+    padding-left .4s ease,
+    padding-right .4s ease,
+    transform .4s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  @include m.typography (v.$font-family, 600, 16px, 150%, normal, v.$text-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+h3,
+.catalog  h2  {
+  font-size: 24px;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+h2,
+.catalog  h1 {
+  @include m.typography (v.$font-family, 600, 60px, 125%, normal, inherit);
+}
+
+#app {
+  @include m.flex-settings (column, no-wrap, 20px, start, stretch);
+  max-width: 1440px;
+  margin: 20px auto 40px auto;
+
+  .content{
+    @include m.flex-settings (column, no-wrap, 100px, start, stretch);
+  }
+
+  header,
+  section,
+  footer {
+    padding: 0 40px;
+  }
+
+  .highlight {
+    color: v.$text-accent;
+    font-style: italic;
+    font-family: v.$second-family;
+  }
+
+}
+
+@media (max-width: 680px) {
+  #app {
+    header,
+    section,
+    footer {
+      padding: 0 16px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    h2,
+    .catalog  h1 {
+      font-size: 32px;
+    }
+  }
+}
