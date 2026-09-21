@@ -74,3 +74,12 @@
     }
   }
 }
+
+@media (max-width: 680px) {
+  .footer {
+    &__content {
+      padding: 60px 16px;
+      gap: 40px;
+    }
+  }
+}

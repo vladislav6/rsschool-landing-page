@@ -51,10 +51,21 @@
 
 @media (max-width: 1050px) {
   #download {
+
     flex-direction: column;
 
     .download-info {
       max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #download {
+    gap: 40px;
+    
+    .download-btn {
+      flex-direction: column;
     }
   }
 }

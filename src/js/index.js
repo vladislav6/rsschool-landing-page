@@ -18,7 +18,7 @@ if (!localStorage.getItem('theme')) {
 }
   body.className = theme.name;
 
-if (path === '/catalog') {
+if (path === '/rsschool-landing-page/catalog') {
   content.append(catalog, footer);
 } else {
   content.append(hero, favorite, about, download, footer);

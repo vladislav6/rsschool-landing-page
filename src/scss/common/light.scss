@@ -102,5 +102,7 @@ body.light {
     }
 
     .coffee-card { border-color: v.$border-primary; }
+
+    .show-more { background: transparent url("/src/assets/icons/light/refresh.svg") center no-repeat; }
   }
 }

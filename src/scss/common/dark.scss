@@ -104,5 +104,7 @@ body.dark {
     }
 
     .coffee-card { border-color: v.$dark-border-primary; }
+
+    .show-more { background: transparent url("/src/assets/icons/dark/refresh.svg") center no-repeat; }
   }
 }

@@ -6,7 +6,7 @@ footer.innerHTML = `
 <div class="footer__content">
   <div class="footer__brand">
     <h2>
-      Sip, Savor, Smile. <span class="highlight">It’s coffee time!</span>
+      Sip, Savor, Smile.<br /> <span class="highlight">It’s coffee time!</span>
     </h2>
 
     <div class="footer__socials">
