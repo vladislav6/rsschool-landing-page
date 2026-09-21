@@ -102,6 +102,8 @@ catalog.innerHTML = `
     </div>
   </article>
 </div>
+
+<button class="show-more" type="button"></button>
 `;
 
 export default catalog;

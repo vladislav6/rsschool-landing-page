@@ -70,4 +70,23 @@
   .coffee-card:hover img{
     transform: scale(1);
   }
+
+  .show-more { display: none; }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    .coffee-card:nth-child(n+5) {
+      display: none;
+    }
+
+    .show-more {
+      display: block;
+      border: 1px solid v.$background-container;
+      border-radius: 100px;
+      width: 60px;
+      height: 60px;
+      background: transparent url("/src/assets/icons/refresh.svg") center no-repeat;
+    }
+  }
 }
