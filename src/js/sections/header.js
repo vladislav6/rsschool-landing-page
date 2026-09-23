@@ -7,12 +7,12 @@ header.innerHTML = `
   <a href="/rsschool-landing-page/">
     <img class="logo" src="./images/${theme.name}/logo.png" alt="Logo">
   </a>
-  <nav>
+  <nav class="nav">
     <ul>
-      <li><a href="/rsschool-landing-page/#favorite">Favorite coffee</a></li>
-      <li><a href="/rsschool-landing-page/#about">About</a></li>
-      <li><a href="/rsschool-landing-page/#download">Mobile app</a></li>
-      <li><a href="${path}#contacts">Contact us</a></li>
+      <li><a href="/#favorite" class="menu-link">Favorite coffee</a></li>
+      <li><a href="/#about" class="menu-link">About</a></li>
+      <li><a href="/#download" class="menu-link">Mobile app</a></li>
+      <li><a href="${path}#contacts" class="menu-link">Contact us</a></li>
     </ul>
   </nav>
   <div class="action">
@@ -20,11 +20,11 @@ header.innerHTML = `
       <div class="light-btn"></div>
       <div class="dark-btn"></div>
     </div>
-    <a class="menu-item" href="/rsschool-landing-page/catalog">Menu</a>
     <div class="burger">
       <span class="line"></span>
       <span class="line"></span>
     </div>
+    <a class="menu-item menu-link" href="/catalog">Menu</a>
   </div>
 `;
 

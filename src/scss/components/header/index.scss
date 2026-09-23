@@ -4,7 +4,7 @@
 header {
   @include m.flex-settings (row, no-wrap, 0, start, center);
 
-  nav {
+  .nav {
     flex-grow: 1;
 
     ul {
@@ -64,13 +64,87 @@ header {
 @media (max-width: 768px) {
   header {
     justify-content: space-between;
-    nav,
+    
+    .nav {
+      @include m.flex-settings (column, no-wrap, 100px, center, center);
+      position: absolute;
+      inset: 0;
+      top: 80px;
+      z-index: 2;
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+      animation: hide .4s ease;
+
+      ul {
+        display: none;
+      }
+    }
+
     .menu-item {
       display: none;
     }
 
+    .show-nav {
+      @include m.flex-settings (column, no-wrap, 100px, center, center);
+      width: 100%;
+      padding: 60px 40px;
+      animation: show .4s ease;
+
+      ul {
+        @include m.flex-settings (column, no-wrap, 60px, center, center);
+      }
+
+      a {
+        font-size: 32px;
+      }
+    }
+
+    .show-link {
+      display: inline;
+      background-size: 30px;
+      padding-top: 10px;
+      padding-right: 46px;
+      padding-bottom: 5px;
+    }
+
     .burger {
       @include m.flex-settings (column, no-wrap, 8px, center, center);
+    }
+
+    .show {
+      .line {
+        transform: rotate(45deg);
+      }
+
+      .line:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-top: -9px;
+      }
+    }
+  }
+
+  @keyframes show {
+    0% {
+      width: 0;
+      padding: 0;
+    }
+
+    100% {
+      width: 100%;
+      padding: 60px 40px;
+    }
+  }
+
+  @keyframes hide {
+    0% {
+      width: 100%;
+      padding: 60px 40px;
+    }
+
+    100% {
+      width: 0;
+      padding: 0;
     }
   }
 }

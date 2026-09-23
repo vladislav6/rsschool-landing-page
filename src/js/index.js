@@ -8,6 +8,7 @@ import hero from './sections/hero';
 import favorite from './sections/favorite';
 import about from './sections/about';
 import download from './sections/download';
+import './modules/burger.js';
 
 const app = document.getElementById('app');
 const content = createMyElement('div', 'content');
@@ -18,7 +19,7 @@ if (!localStorage.getItem('theme')) {
 }
   body.className = theme.name;
 
-if (path === '/rsschool-landing-page/catalog') {
+if (path === '/catalog') {
   content.append(catalog, footer);
 } else {
   content.append(hero, favorite, about, download, footer);

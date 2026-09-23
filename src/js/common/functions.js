@@ -24,7 +24,12 @@ export function createMyElement(
   theme.name === 'light'
     ? localStorage.setItem('theme', 'dark')
     : localStorage.setItem('theme', 'light');
+  
   theme.name = localStorage.getItem('theme');
-  body.className = theme.name;
+  
+  body.classList.contains('scroll-lock')
+    ? body.classList = `${theme.name} scroll-lock`
+    : body.classList = theme.name; 
+
   document.querySelector('.logo').src = `./images/${theme.name}/logo.png`;
  };

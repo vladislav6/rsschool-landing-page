@@ -29,6 +29,8 @@ body.dark {
     .line { background-color: v.$dark-text-primary; }
   }
 
+  .show-nav { background-color: v.$dark-bg-page; }
+
   .hero button {
     background-color: v.$dark-bg-page;
     color: v.$dark-text-primary;
