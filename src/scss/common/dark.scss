@@ -19,7 +19,8 @@ body.dark {
   .menu-item { background-image: url("/src/assets/icons/dark/coffee-cup.svg"); }
 
   nav a:hover,
-  a.menu-item:hover {
+  a.menu-item:hover,
+  .active-page {
     border-bottom: 2px solid v.$dark-text-primary;
   }
 

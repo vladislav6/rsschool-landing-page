@@ -24,7 +24,7 @@ header.innerHTML = `
       <span class="line"></span>
       <span class="line"></span>
     </div>
-    <a class="menu-item menu-link" href="/catalog">Menu</a>
+    <a class="menu-item menu-link ${path === '/catalog' ? 'active-page' : ''}" href="/catalog">Menu</a>
   </div>
 `;
 
