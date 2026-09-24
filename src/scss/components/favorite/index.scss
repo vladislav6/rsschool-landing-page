@@ -11,8 +11,14 @@
     @include m.flex-settings (row, no-wrap, 40px, space-between, center);
   }
 
+  .slides {
+    @include m.flex-settings (row, no-wrap, 0, center, stretch);
+    overflow: hidden;
+  }
+
   .slide {
-    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
     @include m.flex-settings (column, no-wrap, 20px, start, center);
   }
 
@@ -59,6 +65,10 @@
       height: 4px;
       border-radius: 100px;
     }
+  }
+  
+  .no-click {
+    pointer-events: none;
   }
 }
 

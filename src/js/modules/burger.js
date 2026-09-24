@@ -18,7 +18,7 @@ function onLoadBurger() {
   };
 
   const linkAction = (e) => {
-    if (e.target.closest('.menu-link')) {
+    if (e.target.closest('.menu-link') && burger.classList.contains('show')) {
       e.preventDefault();
       showHideMenu();
       setTimeout(() => {
