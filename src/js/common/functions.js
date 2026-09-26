@@ -1,5 +1,17 @@
 import { body, theme } from "./common";
 
+export async function productFetch(url) {
+  return await fetch(url)
+    .then(response => response.json())
+    .catch(error => console.log(`Error: ${error}`)); 
+}
+
+export function cleanDOM(parent) {
+  while (parent.firstChild) {
+    parent.firstChild.remove();
+  }
+}
+
 export function createMyElement(
   element,
   classElement = '',

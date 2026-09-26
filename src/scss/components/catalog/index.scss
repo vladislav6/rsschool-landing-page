@@ -40,6 +40,8 @@
     border-radius: 40px;
     cursor: pointer;
     @include m.flex-settings (column, no-wrap, 0, start, stretch);
+    animation: opacityHide .5s ease;
+    animation: opacityShow .5s ease;
 
     &__img {
       overflow: hidden;
@@ -93,3 +95,23 @@
     }
   }
 }
+
+ @keyframes opacityhide {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+ @keyframes opacityShow {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }

@@ -10,6 +10,7 @@ import about from './sections/about';
 import download from './sections/download';
 import './modules/burger.js';
 import './modules/slider.js';
+import './modules/products.js';
 
 const app = document.getElementById('app');
 const content = createMyElement('div', 'content');
