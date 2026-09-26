@@ -13,7 +13,7 @@ catalog.innerHTML = `
   <button type="button" class="category" data-cat-name="dessert"><span class="dessert-icon"></span>Dessert</button>
 </div>
 
-<div class="coffee-grid"></div>
+<div class="product-grid"></div>
 
 <button class="show-more" type="button"></button>
 `;

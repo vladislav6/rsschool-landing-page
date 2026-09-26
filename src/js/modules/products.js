@@ -1,8 +1,9 @@
 import { productFetch, cleanDOM, createMyElement } from "../common/functions";
+import { showMore } from "./showMore";
 
 function onProductsLoad() {
   const categories = document.querySelector('.categories');
-  const coffeeGrid = document.querySelector('.coffee-grid');
+  const coffeeGrid = document.querySelector('.product-grid');
   const products = productFetch('/products.json');
 
   const getProductsByCategory = (products, category) =>
@@ -11,12 +12,12 @@ function onProductsLoad() {
   const getCards = (products) => {
     const fragment = document.createDocumentFragment();
     products.forEach((prod, id) => {
-      const article = createMyElement('article', 'coffee-card');
-      const divImg = createMyElement('div', 'coffee-card__img');
+      const article = createMyElement('article', 'product-card card');
+      const divImg = createMyElement('div', 'product-card__img');
       const img = createMyElement('img');
       img.src = `/images/catalog/${prod.category}-${id + 1}.png`;
       img.alt = prod.name;
-      const divInfo = createMyElement('div', 'coffee-card__content');
+      const divInfo = createMyElement('div', 'product-card__content');
       const title = createMyElement('h2', '', '', prod.name);
       const desc = createMyElement('p', 'description', '', prod.description);
       const price = createMyElement('p', 'price', '', prod.price);
@@ -36,6 +37,7 @@ function onProductsLoad() {
       const fragment = getCards(prodByCat);
       cleanDOM(coffeeGrid);
       coffeeGrid.append(fragment);
+      showMore(prodByCat);
     });
   };
 
