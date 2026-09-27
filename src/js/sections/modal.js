@@ -15,7 +15,7 @@ export function drawModal(prod, id) {
   modal.innerHTML = `
   <div class="product-modal">
     <div class="product-modal__image">
-      <img src="/images/catalog/${category}-${+id + 1}.png" alt="${name}">
+      <img src="./catalog/${category}-${+id + 1}.png" alt="${name}">
     </div>
     <div class="product-modal__content">
       <div class="product-modal__header">
@@ -25,15 +25,15 @@ export function drawModal(prod, id) {
       <div class="product-modal__option">
         <h3 class="product-modal__label">Size</h3>
         <div class="product-modal__sizes">
-          <button type="button" class="size-option size-option--active">
+          <button type="button" class="size-option option--active" data-add-price="${sizes.s["add-price"]}">
             <span class="size-option__number">S</span>
             <span class="size-option__value">${sizes.s.size}</span>
           </button>
-          <button type="button" class="size-option">
+          <button type="button" class="size-option" data-add-price="${sizes.m["add-price"]}">
             <span class="size-option__number">M</span>
             <span class="size-option__value">${sizes.m.size}</span>
           </button>
-          <button type="button" class="size-option">
+          <button type="button" class="size-option" data-add-price="${sizes.l["add-price"]}">
             <span class="size-option__number">L</span>
             <span class="size-option__value">${sizes.l.size}</span>
           </button>
@@ -42,15 +42,15 @@ export function drawModal(prod, id) {
       <div class="product-modal__option">
         <h3 class="product-modal__label">Additives</h3>
         <div class="product-modal__additives">
-          <button type="button" class="additive-option">
+          <button type="button" class="additive-option" data-add-price="${additives[0]["add-price"]}">
             <span class="additive-option__number">1</span>
             <span class="additive-option__name">${additives[0].name}</span>
           </button>
-          <button type="button" class="additive-option">
+          <button type="button" class="additive-option" data-add-price="${additives[1]["add-price"]}">
             <span class="additive-option__number">2</span>
             <span class="additive-option__name">${additives[1].name}</span>
           </button>
-          <button type="button" class="additive-option">
+          <button type="button" class="additive-option" data-add-price="${additives[2]["add-price"]}">
             <span class="additive-option__number">3</span>
             <span class="additive-option__name">${additives[2].name}</span>
           </button>

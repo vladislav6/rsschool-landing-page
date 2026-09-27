@@ -5,7 +5,7 @@ import { showMore } from "./showMore";
 function onProductsLoad() {
   const categories = document.querySelector('.categories');
   const coffeeGrid = document.querySelector('.product-grid');
-  const products = productFetch('/products.json');
+  const products = productFetch('./catalog/products.json');
 
   const getProductsByCategory = (products, category) =>
     products.filter(product => product.category === category);
@@ -17,7 +17,7 @@ function onProductsLoad() {
       article.dataset.name = `${id}-${prod.category}-${prod.name}`;
       const divImg = createMyElement('div', 'product-card__img');
       const img = createMyElement('img');
-      img.src = `/images/catalog/${prod.category}-${id + 1}.png`;
+      img.src = `./catalog/${prod.category}-${id + 1}.png`;
       img.alt = prod.name;
       const divInfo = createMyElement('div', 'product-card__content');
       const title = createMyElement('h2', '', '', prod.name);

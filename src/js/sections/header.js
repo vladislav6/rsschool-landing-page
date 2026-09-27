@@ -9,9 +9,9 @@ header.innerHTML = `
   </a>
   <nav class="nav">
     <ul>
-      <li><a href="/#favorite" class="menu-link">Favorite coffee</a></li>
-      <li><a href="/#about" class="menu-link">About</a></li>
-      <li><a href="/#download" class="menu-link">Mobile app</a></li>
+      <li><a href="/rsschool-landing-page/#favorite" class="menu-link">Favorite coffee</a></li>
+      <li><a href="/rsschool-landing-page/#about" class="menu-link">About</a></li>
+      <li><a href="/rsschool-landing-page/#download" class="menu-link">Mobile app</a></li>
       <li><a href="${path}#contacts" class="menu-link">Contact us</a></li>
     </ul>
   </nav>
@@ -24,7 +24,7 @@ header.innerHTML = `
       <span class="line"></span>
       <span class="line"></span>
     </div>
-    <a class="menu-item menu-link ${path === '/catalog' ? 'active-page' : ''}" href="/catalog">Menu</a>
+    <a class="menu-item menu-link ${path === '/rsschool-landing-page/catalog' ? 'active-page' : ''}" href="/rsschool-landing-page/catalog">Menu</a>
   </div>
 `;
 
