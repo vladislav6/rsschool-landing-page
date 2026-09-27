@@ -1,4 +1,5 @@
 import { productFetch, cleanDOM, createMyElement } from "../common/functions";
+import { modal } from "./modal";
 import { showMore } from "./showMore";
 
 function onProductsLoad() {
@@ -13,6 +14,7 @@ function onProductsLoad() {
     const fragment = document.createDocumentFragment();
     products.forEach((prod, id) => {
       const article = createMyElement('article', 'product-card card');
+      article.dataset.name = `${id}-${prod.category}-${prod.name}`;
       const divImg = createMyElement('div', 'product-card__img');
       const img = createMyElement('img');
       img.src = `/images/catalog/${prod.category}-${id + 1}.png`;
@@ -52,6 +54,7 @@ function onProductsLoad() {
   };
 
   categories?.addEventListener('click', getProduct);
+  coffeeGrid?.addEventListener('click', modal);
   if (coffeeGrid) {
     renderCards('coffee');
   }

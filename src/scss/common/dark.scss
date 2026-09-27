@@ -110,4 +110,50 @@ body.dark {
 
     .show-more { background: transparent url("/src/assets/icons/dark/refresh.svg") center no-repeat; }
   }
+
+  .modal {
+    .product-modal {
+      background-color: v.$dark-bg-modal;
+
+      &__sizes,
+      &__additives {
+        .size-option,
+        .additive-option {
+          border-color: v.$dark-border-primary;
+          color: v.$dark-text-primary;
+
+          &__number { background: v.$dark-border-primary; }
+        }
+
+        .size-option--active,
+        .size-option:hover,
+        .additive-option:hover {
+          background: v.$dark-bg-modal-control;
+          border-color: v.$dark-bg-modal-control;
+
+          .size-option__number,
+          .additive-option__number {
+            background: v.$dark-bg-container;
+            color: v.$dark-text-primary;
+          }
+        }
+      }
+
+      &__notice { border-top-color: v.$dark-border-primary; }
+      
+      &__notice-icon {
+        background: url("/src/assets/icons/dark/info-empty.svg") center no-repeat;
+      }
+
+      &__close {
+        border-color: v.$dark-border-primary;
+        color: v.$dark-text-primary;
+      }
+
+      &__close:hover {
+        background: v.$dark-bg-modal-control;
+        border-color: v.$dark-bg-modal-control;
+      }
+    }
+  }
 }

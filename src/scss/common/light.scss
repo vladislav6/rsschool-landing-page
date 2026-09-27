@@ -108,4 +108,52 @@ body.light {
 
     .show-more { background: transparent url("/src/assets/icons/light/refresh.svg") center no-repeat; }
   }
+
+  .modal {
+    background-color: v.$dark-bg-overlay;
+
+    .product-modal {
+      background-color: v.$background-modal;
+
+      &__sizes,
+      &__additives {
+        .size-option,
+        .additive-option {
+          border-color: v.$border-primary;
+          color: v.$text-primary;
+
+          &__number { background: v.$border-primary; }
+        }
+
+        .size-option--active,
+        .size-option:hover,
+        .additive-option:hover {
+          background: v.$background-container;
+          color: v.$text-inverse;
+
+          .size-option__number,
+          .additive-option__number {
+            background: v.$text-inverse;
+            color: v.$text-primary;
+          }
+        }
+      }
+
+      &__notice { border-top-color: v.$border-primary; }
+      
+      &__notice-icon {
+        background: url("/src/assets/icons/light/info-empty.svg") center no-repeat;
+      }
+
+      &__close {
+        border-color: v.$background-container;
+        color: v.$text-primary;
+      }
+
+      &__close:hover {
+        background: v.$background-container;
+        color: v.$text-inverse;
+      }
+    }
+  }
 }

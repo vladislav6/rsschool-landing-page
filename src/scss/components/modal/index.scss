@@ -1,0 +1,133 @@
+@use '/src/scss/common/variables' as v;
+@use '/src/scss/common/mixins' as m;
+
+.modal {
+  background-color: v.$dark-bg-overlay;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+  @include m.flex-settings (row, no-wrap, 0, center, center);
+
+  .product-modal {
+    cursor: default;
+    max-width: 800px;
+    padding: 16px;
+    border-radius: 40px;
+    @include m.flex-settings (row, no-wrap, 20px, start, stretch);
+
+    img {
+        border-radius: 40px;
+    }
+
+    &__content {
+      @include m.flex-settings (column, no-wrap, 20px, start, stretch);
+    }
+
+    &__header {
+      @include m.flex-settings (column, no-wrap, 12px, start, stretch);
+    }
+
+    &__title { font-size: 24px; }
+    
+    &__description {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    &__label {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    &__sizes,
+    &__additives {
+      @include m.flex-settings (row, wrap, 8px, start, stretch);
+
+      .size-option,
+      .additive-option {
+        border-width: 1px; 
+        border-style: solid;
+        border-radius: 100px;
+        padding: 8px 16px 8px 8px;
+        @include m.flex-settings (row, no-wrap, 8px, start, center);
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 16px;
+
+        &__number {
+          @include m.flex-settings (row, no-wrap, 0, center, center);
+          border-radius: 100px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &__total {
+      font-size: 24px;
+      @include m.flex-settings (row, no-wrap, 0, space-between, stretch);
+    }
+
+    &__price {
+      text-align: right;
+    }
+
+    &__notice {
+      border-top-width: 1px;
+      border-top-style: solid;
+      font-size: 10px;
+      line-height: 140%;
+      @include m.flex-settings (row, no-wrap, 8px, start, stretch);
+      padding: 12px 0;
+    }
+    
+    &__notice-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    &__close {
+      border-width: 1px; 
+      border-style: solid;
+      border-radius: 100px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 16px;
+      background-color: transparent;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    .product-modal {
+      max-width: 688px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .modal {
+    .product-modal {
+      max-width: 550px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .modal {
+    .product-modal {
+      max-width: 342px;
+      
+      &__image {
+        display: none;
+      }
+    }
+  }
+}
