@@ -7,6 +7,7 @@ slider.innerHTML = `
   Choose your <span class="highlight">favorite</span> coffee
 </h2>
 <div class="slider">
+  <div class="no-button"></div>
   <button class="slider-btn slider-btn--left" aria-label="Previous coffee"></button>
 
   <div class="slides">

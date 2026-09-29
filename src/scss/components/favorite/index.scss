@@ -9,6 +9,10 @@
 
   .slider {
     @include m.flex-settings (row, no-wrap, 40px, space-between, center);
+
+    .no-button {
+      display: none;
+    }
   }
 
   .slides {
@@ -73,6 +77,21 @@
 }
 
 @media (max-width: 550px) {
+  #favorite {
+    .slider {
+      position: relative;
+
+      .no-button {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        cursor: grab;
+        user-select: none;
+      }
+    }
+  }
+
   .slider-btn {
     display: none;
   }

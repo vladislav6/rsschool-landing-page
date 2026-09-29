@@ -1,8 +1,13 @@
 
 function onLoadSlider() {
   const slider = document.querySelector('.slider');
+  const noButtonSlider = document.querySelector('.no-button');
   const slides = document.querySelector('.slides');
   const dots = document.querySelector('.slider-dots')?.children;
+  let startX = 0;
+  let currentX = 0;
+  let diffX = 0;
+
 
   const changeDot = (position) => {
     [...dots].forEach(dot => dot.classList.remove('dot--active'));
@@ -67,22 +72,7 @@ function onLoadSlider() {
     }
   };
 
-  slider?.addEventListener('click', changeSlide);
-
-  let startX = 0;
-  let currentX = 0;
-  let diffX = 0;
-
-  slider?.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-  });
-
-  slider?.addEventListener('touchmove', (e) => {
-      currentX = e.touches[0].clientX;
-      diffX = startX - currentX;
-  });
-
-  slider?.addEventListener('touchend', () => {
+  const swipeClickSlide = () => {
     const isNoClick = document.querySelector('.no-click');
     const rightBtn = document.querySelector('.slider-btn--right');
     const leftBtn = document.querySelector('.slider-btn--left');
@@ -93,7 +83,33 @@ function onLoadSlider() {
     }
     startX = 0;
     diffX = 0;
+    slider?.addEventListener('click', changeSlide);
+  }
+
+  slider?.addEventListener('click', changeSlide);
+
+  noButtonSlider?.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
   });
+
+  noButtonSlider?.addEventListener('touchmove', (e) => {
+    currentX = e.touches[0].clientX;
+    diffX = startX - currentX;
+  });
+
+  noButtonSlider?.addEventListener('touchend', swipeClickSlide);
+
+  noButtonSlider?.addEventListener('mousedown', (e) => {
+    slider?.removeEventListener('click', changeSlide);
+    startX = e.clientX;
+  });
+
+  noButtonSlider?.addEventListener('mousemove', (e) => {
+    currentX = e.clientX;
+    diffX = startX - currentX;
+  });
+
+  noButtonSlider?.addEventListener('mouseup', swipeClickSlide);
 }
 
 window.addEventListener('DOMContentLoaded', onLoadSlider);
