@@ -19,7 +19,8 @@ body.light {
   .menu-item { background-image: url("/src/assets/icons/light/coffee-cup.svg"); }
 
   nav a:hover,
-  a.menu-item:hover { 
+  a.menu-item:hover,
+  .active-page { 
     border-bottom: 2px solid v.$text-primary;
   }
 
@@ -28,6 +29,8 @@ body.light {
     
     .line { background-color: v.$text-primary; }
   }
+
+  .show-nav { background-color: v.$background-page; }
 
   .hero button {
     background-color: v.$text-inverse;
@@ -104,5 +107,53 @@ body.light {
     .coffee-card { border-color: v.$border-primary; }
 
     .show-more { background: transparent url("/src/assets/icons/light/refresh.svg") center no-repeat; }
+  }
+
+  .modal {
+    background-color: v.$dark-bg-overlay;
+
+    .product-modal {
+      background-color: v.$background-modal;
+
+      &__sizes,
+      &__additives {
+        .size-option,
+        .additive-option {
+          border-color: v.$border-primary;
+          color: v.$text-primary;
+
+          &__number { background: v.$border-primary; }
+        }
+
+        .option--active,
+        .size-option:hover,
+        .additive-option:hover {
+          background: v.$background-container;
+          color: v.$text-inverse;
+
+          .size-option__number,
+          .additive-option__number {
+            background: v.$text-inverse;
+            color: v.$text-primary;
+          }
+        }
+      }
+
+      &__notice { border-top-color: v.$border-primary; }
+      
+      &__notice-icon {
+        background: url("/src/assets/icons/light/info-empty.svg") center no-repeat;
+      }
+
+      &__close {
+        border-color: v.$background-container;
+        color: v.$text-primary;
+      }
+
+      &__close:hover {
+        background: v.$background-container;
+        color: v.$text-inverse;
+      }
+    }
   }
 }

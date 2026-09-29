@@ -70,7 +70,10 @@ h2,
     font-style: italic;
     font-family: v.$second-family;
   }
+}
 
+.scroll-lock {
+  overflow: hidden;
 }
 
 @media (max-width: 680px) {

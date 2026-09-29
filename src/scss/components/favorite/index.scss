@@ -9,10 +9,20 @@
 
   .slider {
     @include m.flex-settings (row, no-wrap, 40px, space-between, center);
+
+    .no-button {
+      display: none;
+    }
+  }
+
+  .slides {
+    @include m.flex-settings (row, no-wrap, 0, center, stretch);
+    overflow: hidden;
   }
 
   .slide {
-    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
     @include m.flex-settings (column, no-wrap, 20px, start, center);
   }
 
@@ -60,9 +70,28 @@
       border-radius: 100px;
     }
   }
+  
+  .no-click {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 550px) {
+  #favorite {
+    .slider {
+      position: relative;
+
+      .no-button {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        cursor: grab;
+        user-select: none;
+      }
+    }
+  }
+
   .slider-btn {
     display: none;
   }

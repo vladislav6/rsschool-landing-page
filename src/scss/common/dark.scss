@@ -19,7 +19,8 @@ body.dark {
   .menu-item { background-image: url("/src/assets/icons/dark/coffee-cup.svg"); }
 
   nav a:hover,
-  a.menu-item:hover {
+  a.menu-item:hover,
+  .active-page {
     border-bottom: 2px solid v.$dark-text-primary;
   }
 
@@ -28,6 +29,8 @@ body.dark {
     
     .line { background-color: v.$dark-text-primary; }
   }
+
+  .show-nav { background-color: v.$dark-bg-page; }
 
   .hero button {
     background-color: v.$dark-bg-page;
@@ -106,5 +109,51 @@ body.dark {
     .coffee-card { border-color: v.$dark-border-primary; }
 
     .show-more { background: transparent url("/src/assets/icons/dark/refresh.svg") center no-repeat; }
+  }
+
+  .modal {
+    .product-modal {
+      background-color: v.$dark-bg-modal;
+
+      &__sizes,
+      &__additives {
+        .size-option,
+        .additive-option {
+          border-color: v.$dark-border-primary;
+          color: v.$dark-text-primary;
+
+          &__number { background: v.$dark-border-primary; }
+        }
+
+        .option--active,
+        .size-option:hover,
+        .additive-option:hover {
+          background: v.$dark-bg-modal-control;
+          border-color: v.$dark-bg-modal-control;
+
+          .size-option__number,
+          .additive-option__number {
+            background: v.$dark-bg-container;
+            color: v.$dark-text-primary;
+          }
+        }
+      }
+
+      &__notice { border-top-color: v.$dark-border-primary; }
+      
+      &__notice-icon {
+        background: url("/src/assets/icons/dark/info-empty.svg") center no-repeat;
+      }
+
+      &__close {
+        border-color: v.$dark-border-primary;
+        color: v.$dark-text-primary;
+      }
+
+      &__close:hover {
+        background: v.$dark-bg-modal-control;
+        border-color: v.$dark-bg-modal-control;
+      }
+    }
   }
 }
